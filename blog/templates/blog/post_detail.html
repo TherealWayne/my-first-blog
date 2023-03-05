@@ -1,0 +1,67 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <article class="post">
+        <aside class="actions">
+        {% if user.is_authenticated %}
+            <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
+                {% include './icons/pencil-fill.svg' %}
+            </a>
+            <a class="btn btn-default" href="<div data-gb-custom-block data-tag="url" data-0='post_remove'></div>"><span class="glyphicon glyphicon-remove"></span></a>
+        {% endif %}
+        </aside>
+        <div data-gb-custom-block data-tag="if"></div>
+
+    <div class="date">
+        {{ post.published_date }}
+    </div>
+
+<div data-gb-custom-block data-tag="else"></div>
+
+    <a class="btn btn-default" href="
+
+<div data-gb-custom-block data-tag="url" data-0='post_publish'>
+
+">Publish</a>
+
+</div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+    <hr>
+
+    <div data-gb-custom-block data-tag="for"></div>
+
+    
+
+    <div data-gb-custom-block data-tag="if"></div>
+    
+        <div class="comment">
+            <div class="date">
+                {{ comment.created_date }}
+                
+    
+    <div data-gb-custom-block data-tag="if"></div>
+    
+                    <a class="btn btn-default" href="
+    
+    <div data-gb-custom-block data-tag="url" data-0='comment_remove'>"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a class="btn btn-default" href="<div data-gb-custom-block data-tag="url" data-0='comment_approve'>"><span class="glyphicon glyphicon-ok"></span></a>
+                </div>
+    
+            </div>
+            <strong>{{ comment.author }}</strong>
+            <p>{{ comment.text|linebreaks }}</p>
+        </div>
+        
+    
+    </div>
+    
+    <div data-gb-custom-block data-tag="empty">
+    
+        <p>No comments here yet :(</p>
+    
+    </div>
+{% endblock %}
+
+

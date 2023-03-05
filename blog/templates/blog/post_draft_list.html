@@ -1,0 +1,19 @@
+<div data-gb-custom-block data-tag="extends" data-0='blog/base.html'></div>
+
+<div data-gb-custom-block data-tag="block"></div>
+
+    
+
+<div data-gb-custom-block data-tag="for">
+
+        <div class="post">
+            <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
+            <h1><a href="
+
+<div data-gb-custom-block data-tag="url" data-0='post_detail'>">{{ post.title }}</a></h1>
+            <p>{{ post.text|truncatechars:200 }}</p>
+        </div>
+    </div>
+
+</div>
+

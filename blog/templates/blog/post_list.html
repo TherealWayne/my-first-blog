@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </header>
+<div data-gb-custom-block data-tag="extends" data-0='blog/base.html'></div>
 
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </article>
+<div data-gb-custom-block data-tag="block"></div>
 
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </article>
-    </body>
-</html>
+    
+
+<div data-gb-custom-block data-tag="for"></div>
+
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="
+
+<div data-gb-custom-block data-tag="url" data-0='post_detail'>">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="<div data-gb-custom-block data-tag="url" data-0='post_detail'></div>">Comments: {{ post.approved_comments.count }}</a>
+        </div>
+    </div>
+
+</div>
+
 
